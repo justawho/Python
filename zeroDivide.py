@@ -1,5 +1,8 @@
 def spam(divideBy):
-    return 42/ divideBy
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError:
+        print('Error: Invalid arguement.')
 
 
 print(spam(2))
