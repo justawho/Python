@@ -7,6 +7,7 @@ def collatz(number):
         newNumber = (3 * number + 1)
         print (newNumber)
         return int(3 * number + 1)
+
 try:
     print('Please enter an integer.')
     number = int(input())
