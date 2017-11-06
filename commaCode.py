@@ -9,3 +9,6 @@ spam = ['apples', 'bananas', 'tofu', 'cats']
 comma(spam)
 food = ['Pizza','pasta', 'spaghetti', 'cheese', 'apples', 'bananas', 'tofu', 'cats', 'dogs', 'snails']
 comma(food)
+
+
+comma(spam + food)
