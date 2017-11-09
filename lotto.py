@@ -4,10 +4,10 @@ import random
 def lotto():
     number = [0] * 8
     print (number)
-    for i in range (7):
+    for i in range (8):
         current = random.randint(1, 54)
         print (current)
-        while  current not in number:
+        if  current not in number:
             number[i] = current
             print (number)
         else:
