@@ -9,6 +9,7 @@ def lotto():
         print (current)
         while  current not in number:
             number[i] = current
+            print (number)
         else:
             current = random.randint(1, 54)
             number[i] = current
