@@ -19,7 +19,4 @@ def lotto():
 
 
 lotto()
-lotto()
-lotto()
-lotto()
-lotto()
+
