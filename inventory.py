@@ -21,11 +21,11 @@ displayInventory(stuff)
 
 # update inventory numbers or adds items to inventory after looting
 def addToInventory(inventory, addedItems):
-    for i in set(addedItems):
+    for i in set(addedItems):   # iterates through unique list items
         if i in inventory:
-            inventory[i] = inventory[i] + addedItems.count(i)
+            inventory[i] = inventory[i] + addedItems.count(i)   # counts how many times an item is in the list and adds it to the inventory
         else:
-            inventory.setdefault(i, addedItems.count(i))
+            inventory.setdefault(i, addedItems.count(i))     # counts how many times an item is in the list and adds it to the inventory
     return inventory
 
 
