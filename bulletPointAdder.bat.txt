@@ -1,0 +1,2 @@
+@py.exe C:\Users\mjlesseyhordatt\Documents\GitHub\Python\bulletPointAdder.py %* 
+@pause
