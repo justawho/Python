@@ -2,25 +2,17 @@
 ## displays it in a well-organized table
 
 
-
-tableData = [['apples', 'oranges', 'cherries', 'banana'],
-             ['Alice', 'Bob', 'Carol', 'David'],
-             ['dogs', 'cats', 'moose', 'goose']]
-
 def printTable(someTable):
    colWidths = [0] * len(someTable)
-   for i in range (len(someTable)):
-      colWidths[i] = len(max(someTable[i]))
-      for j in range(len(someTable[i])):
-          print (len(someTable[i][j]))
+   for j in range (len(someTable[0])):
+      for i in range(len(someTable)):
+          colWidths[i] = len(max(someTable[i], key=len))
           item =   someTable[i][j]
-          print (item.rjust(colWidths[i]+1))
-
-        
+          print (item.rjust(colWidths[i]), end='' + ' ')
+      print('')                 
 
 tableData = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose']]
-
 
 printTable(tableData)
