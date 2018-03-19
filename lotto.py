@@ -3,8 +3,8 @@ from tkinter import *
 
 def lotto():
     
-    numbers = str(random.sample(range(1, 69), 5))
-    numString = ''.join(map(str,numbers))
+    numbers = sorted(random.sample(range(1, 69), 5))
+    numString = ', '.join(map(str,numbers))
     powerball = random.randint(1, 24)
     txtOutput = "White Balls are: " + numString + ' Powerball number: ' + str(powerball) 
     print(txtOutput)
