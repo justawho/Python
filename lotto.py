@@ -8,6 +8,7 @@ def lotto():
     powerball = random.randint(1, 24)
     txtOutput = "White Balls : " + numString + '\n' + 'Powerball : ' + str(powerball) 
     print(txtOutput +  '\n')
+    return (numbers)
 
 
 
