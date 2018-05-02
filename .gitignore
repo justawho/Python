@@ -50,3 +50,6 @@ Temporary Items
 *.xml
 *.xml
 __pycache__/numpy.cpython-36.pyc
+*.dir
+*.dat
+*.bak
