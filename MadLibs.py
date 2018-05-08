@@ -8,11 +8,18 @@ import os
 
 
 terms = ['ADJECTIVE', 'NOUN', 'ADVERB', 'VERB']
-madFile = open('MadLibs.txt', r)
-madContent = mad.read()
+madFile = open('MadLibs.txt', 'r')
+madContent = madFile.readlines()
+madAnswers = open('MadAnswers.txt', 'w')
+response = input('Enter a thing: ')
 
-for terms in madContent:
-	if terms[i].lower == 'adjective':
-		lib = input('Enter an adjective: ')
-	else:
-		lib = input('Enter a '+ terms[i]+ ':')
+
+for i in terms:
+        if i in madContent and (i == 'ADJECTIVE' or i =='ADVERB'):
+                response = input('Enter an '+ i + ':')
+        elif i in madContent and i != 'ADJECTIVE':
+                response = input('Enter a ' + i + ':')
+	
+
+
+madFile.close()	
