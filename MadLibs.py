@@ -6,19 +6,21 @@
 
 import os
 
-
+# instantiate the terms
 terms = ['ADJECTIVE', 'NOUN', 'ADVERB', 'VERB']
-madFile = open('MadLibs.txt', 'r')
-madContent = madFile.readlines()
+# open up the MadLibs file 
+madFile = open('MadLibs.txt', 'r+')
+madContent = madFile.read()
+
 madAnswers = open('MadAnswers.txt', 'w')
-response = input('Enter a thing: ')
 
 
-for i in terms:
-        if i in madContent and (i == 'ADJECTIVE' or i =='ADVERB'):
-                response = input('Enter an '+ i + ':')
-        elif i in madContent and i != 'ADJECTIVE':
-                response = input('Enter a ' + i + ':')
+
+for i in range(len(terms)):
+        if terms[i] in madContent :
+                response = input( 'Enter a ' + terms[i] + ' :')
+                madContent.replace(terms[i], response, 1)
+                print (madAnswers)
 	
 
 
