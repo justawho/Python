@@ -5,6 +5,7 @@
 ## printed to the screen.
 
 import re, os, glob
+from pathlib import Path
 
 
 def regFinder(fileName, regex):
@@ -13,7 +14,9 @@ def regFinder(fileName, regex):
     entry = re.split(regex, fileName)
     print (entry)
 
-os.chdir('C:\\Users\\mjlesseyhordatt\\Documents\\GitHub\\Python\\regexSearch')
+
+data_folder = Path("Python/regexSearch")
+os.chdir(data_folder)
 regex = input("Please enter what you would like to search for: ")
 
 for file in glob.glob('./*.txt'):
