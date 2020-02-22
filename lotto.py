@@ -7,15 +7,35 @@ def lotto():
     numString = ', '.join(map(str,numbers))
     powerball = random.randint(1, 24)
     txtOutput = "White Balls : " + numString + '\n' + 'Powerball : ' + str(powerball)
-    print(txtOutput +  '\n')
-    TheNumbers.config(text=txtOutput)
-    return (numbers)
+ 
+ 
+       
+    return (txtOutput)
 
 
+def lottodraw():
+    drawnumbers = sorted(random.sample(range(1, 69), 5))
+    drawnumString = ', '.join(map(str,drawnumbers))
+    drawpowerball = random.randint(1, 24)
+    drawtxtOutput = "White Balls : " + drawnumString + '\n' + 'Powerball : ' + str(drawpowerball)
+   
 
+    return (drawtxtOutput)
 
+i = 0
 
+yourPick = lotto()
+drawPick = lottodraw()
 
+print (yourPick)
+print ("The next statement will be the number of times the while statement ran before a match was made")
+
+while yourPick != drawPick:
+    drawPick = lottodraw()
+    i = i+1
+
+print (i)
+print (drawPick)
 root = Tk()
 
 
