@@ -34,11 +34,11 @@ def theDraw():
     theLabel.config(text= "The next statement will be the number of times the while statement ran before a match was made")
     theLabel.pack()
     print ("The next statement will be the number of times the while statement ran before a match was made")
-    time.sleep(.300)
     while yourPick != drawPick:
         drawPick = lottodraw()
         i = i+1
 
+    print ("It took " + str(i) + " draws to hit the numbers picked.")
     theLabel.config(text= "It took " + str(i) + " draws to hit the numbers picked.")
     theLabel.pack()
     print (drawPick)
