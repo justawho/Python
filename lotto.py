@@ -22,27 +22,28 @@ def lottodraw():
 
     return (drawtxtOutput)
 
-i = 0
+def theDraw():
+    i = 0
 
-yourPick = lotto()
-drawPick = lottodraw()
-
-print (yourPick)
-print ("The next statement will be the number of times the while statement ran before a match was made")
-
-while yourPick != drawPick:
+    yourPick = lotto()
     drawPick = lottodraw()
-    i = i+1
 
-print (i)
-print (drawPick)
+    print (yourPick)
+    print ("The next statement will be the number of times the while statement ran before a match was made")
+
+    while yourPick != drawPick:
+        drawPick = lottodraw()
+        i = i+1
+
+    print (i)
+    print (drawPick)
+    return ("It took " + str(i) + " draws to hit the numbers picked.")
+
 root = Tk()
-
-
 theLabel = Label(root,text ="Guess the numbers")
 TheNumbers = Label(root, text ="Guess the numbers")
 TheNumbers.pack()
-theLabel.printButton = Button(root, text = "Get Numbers", command = lambda:lotto()).pack()
+theLabel.printButton = Button(root, text = "Get Numbers", command = lambda:theDraw()).pack()
 
 
 
